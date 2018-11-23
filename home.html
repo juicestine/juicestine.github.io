@@ -1,0 +1,71 @@
+<!doctype html>
+ <html lang=en>
+ <body background="images/food.png">
+
+    <head>
+      <title> Cooking is Fun! </title>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/home.css">
+    </head>
+
+    <body>
+      <div class="container">
+        <div class="jumbotron mb-2 text-dark text-left" style="background: url(images/baking-bread.jpg)">
+          <a href="profile.html">
+            <img src="images/profile.png" alt="Profile Icon"
+          style="width:120px;height:120px;border:0" align="right"></a>
+          <h1 class="display-4">SubstiSoup!</h1>
+          <hr class="my-4">
+            <a class="btn btn-light btn-lg mt-3" href="signup.html" role="button">Sign Up</a>
+        </div> <!-- end of jumbotron -->
+
+
+        <div class="container mb">
+          <div class="row mt-3">
+          
+
+        <div class="container mbt-5" id="MyQuestions">
+          <div class="row mt-3">
+            <h1>Open Questions</h1>
+          </div> <!-- End of row 1-->
+          <div class="row mt-3">
+            <a href="#">What's a good substitute for beef?</a>
+          </div> <!-- End of row 2 -->
+          <div class="row mt-3">
+            <a href="#">What's a good substitute for celery?</a>
+          </div> <!-- End of row 3 -->
+          <div class="row mt-3">
+            <a href="#">What's a good substitute for salt?</a>
+          </div> <!-- End of row 4 -->
+        </div>
+
+        <div class="container" id="question-form">
+          <div class="row mt-5">
+            <h1>Ask A Question!</h1>
+          </div> <!-- End of row 1-->
+          <div class="row mt-3">
+            <div class="form-group ">
+              <label for="question">What's a good substitute for: </label>
+              <input type="text" class="form-control" id="question">
+            </div>
+            </div>
+          <div class="row mt-3">
+            <div class="form-group">
+              <label for="description">Description:</label>
+              <textarea class="form-control" rows="5" id="description"></textarea>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-lg mt-3" id="postButton" role="button">Post!</a>
+          <div id="snackbar"> Question Posted! </div>
+        </div>
+      </div>
+      <script src="js/handlebars-v4.0.11.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="js/jquery.slim.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/project.js"></script>
+    </body>
+
+  </body>
+  </html>

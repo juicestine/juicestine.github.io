@@ -1,0 +1,156 @@
+<!doctype html>
+ <html lang=en>
+ <body background="images/food.png">
+
+    <head>
+      <title> SubstiSoup! </title>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/home.css">
+    </head>
+
+    <body>
+      <div class="container">
+        <div class="jumbotron mb-2 text-dark text-left" style="background: url(images/baking-bread.jpg)">
+          <a href="profile.html">
+            <img src="images/profile.png" alt="Profile Icon"
+          style="width:120px;height:120px;border:0" align="right"></a>
+          <h1 class="display-4">SubstiSoup!</h1>
+          <hr class="my-4">
+            <a class="btn btn-light btn-lg mt-3" href="signup.html" role="button">Sign Up</a>
+        </div> <!-- end of jumbotron -->
+
+        <div class="container" id="question-form">
+          <div class="row mt-5">
+            <h1>Ask A Question About Substitutions!</h1>
+          </div> <!-- End of row 1-->
+          <div class="row mt-3">
+            <div class="form-group ">
+              <label for="question">What's a good substitute for: </label>
+              <input type="text" class="form-control" id="question">
+            </div>
+            </div>
+          <div class="row">
+              <a class="btn btn-primary btn-lg mt-3 text-light" id="postButton" role="button">Post!</a>
+              <div id="snackbar"> Question Posted! </div>
+          </div>
+
+        </div>
+
+        <div class="container my-5" id="MyQuestions">
+          <div class="row mt-5">
+            <h1>Open Questions</h1>
+          </div> <!-- End of row 1-->
+
+          <div class="form-group row mt-3">
+            <p>What's a good substitute for beef?</p>
+          </div> <!-- End of row 2 -->
+          <div class="row">
+            <input type="answer" class="form-control" id="answer1" placeholder="Add Your Answer Here!">
+            <div class="mt-2" id="buttons">
+              <btn class="btn btn-primary btn-sm" id="beefPost"> Post </btn>
+              <button class="btn btn-light btn-sm" type="button" data-toggle="collapse"data-target="#results1" aria-expanded="false" aria-controls="collapseExample"> See Results </button>
+            </div>
+            <!--Collapsed Data -->
+            <div class="collapse mt-2" id="results1">
+              <div class="card card-body">
+                <ul class="list-group" id="beefList">
+                  <li class="list-group-item">Tofu</li>
+                  <li class="list-group-item">Tempeh</li>
+                  <li class="list-group-item">Mushrooms</li>
+                  <li class="list-group-item">Lentils</li>
+                  <li class="list-group-item">Jackfruit</li>
+                </ul>
+              </div>
+            </div> <!-- end of collapsed Data -->
+          </div>
+
+          <div class="form-group row mt-3">
+            <p>What's a good substitute for celery?</p>
+          </div>
+          <div class="row">
+            <input type="answer" class="form-control" id="answer2" placeholder="Add Your Answer Here!">
+            <div class="mt-2" id="buttons">
+              <btn class="btn btn-primary btn-sm" id="celeryPost"> Post </btn>
+              <button class="btn btn-light btn-sm" type="button" data-toggle="collapse"data-target="#results2" aria-expanded="false" aria-controls="collapseExample"> See Results </button>
+            </div>
+            <!--Collapsed Data -->
+            <div class="collapse mt-2" id="results2">
+              <div class="card card-body">
+                <ul class="list-group" id="celeryList">
+                  <li class="list-group-item">Carrots</li>
+                  <li class="list-group-item">Cabbage</li>
+                  <li class="list-group-item">Dill</li>
+                  <li class="list-group-item">Parsley</li>
+                  <li class="list-group-item">Bok Choy</li>
+                </ul>
+              </div>
+            </div> <!-- end of collapsed Data -->
+          </div><!-- End of row 3 -->
+
+          <div class="form-group row mt-3">
+            <p>What's a good substitute for salt?</p>
+          </div>
+          <div class="row">
+              <input type="answer" class="form-control" id="answer3" placeholder="Add Your Answer Here!">
+              <div class="mt-2" id="buttons">
+                <btn class="btn btn-primary btn-sm" id="saltPost"> Post </btn>
+                <button class="btn btn-light btn-sm" type="button" data-toggle="collapse"data-target="#results3" aria-expanded="false" aria-controls="collapseExample"> See Results </button>
+
+              </div>
+              <!--Collapsed Data -->
+              <div class="collapse mt-2" id="results3">
+                <div class="card card-body">
+                  <ul class="list-group" id="saltList">
+                    <li class="list-group-item">Lemon Juice</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Fresh herbs (rosemary, cilantro, basil, etc)</li>
+                    <li class="list-group-item">Ground Pepper or Red Pepper Flakes</li>
+                    <li class="list-group-item">Salt substitutes such as Potassium Chloride</li>
+                  </ul>
+                </div>
+              </div> <!-- end of collapsed Data -->
+          </div> <!-- End of row 4 -->
+
+          <div id="templatedQuestion">
+
+          </div>
+
+        </div> <!-- End of MyQuestions div-->
+      </div> <!-- Allcontent div-->
+
+<script id='entry-template1' type="text/x-handlebars-template">
+  <div class="form-group row mt-3">
+    <p>{{title}}</p>
+  </div>
+  <div class="row">
+    <input type="answer" class="form-control" id="answer1" placeholder="Add Your Answer Here!">
+    <div class="mt-2" id="buttons">
+      <btn class="btn btn-primary btn-sm"> Post </btn>
+      <button class="btn btn-light btn-sm" type="button" data-toggle="collapse"data-target="#results{{index}}" aria-expanded="false" aria-controls="collapseExample"> See Results </button>
+    </div>
+    <!--Collapsed Data -->
+    <div class="collapse mt-2" id="results{{index}}">
+      <div class="card card-body">
+        <ul class="list-group">
+          <li class="list-group-item">{{injectedResult1}}</li>
+          <li class="list-group-item">{{injectedResult2}}</li>
+          <li class="list-group-item">{{injectedResult3}}</li>
+          <li class="list-group-item">{{injectedResult4}}</li>
+          <li class="list-group-item">{{injectedResult5}}</li>
+        </ul>
+      </div>
+    </div> <!-- end of collapsed Data -->
+  </div><!-- End of row -->
+</script>
+
+
+      <script src="js/handlebars-v4.0.11.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/project.js"></script>
+    </body>
+
+  </body>
+  </html>

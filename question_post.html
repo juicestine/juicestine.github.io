@@ -1,0 +1,59 @@
+<!doctype html>
+ <html lang=en>
+
+    <head>
+      <title> Cooking is Fun! </title>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/home.css">
+    </head>
+
+    <body>
+      <div class="container">
+        <div class="jumbotron mb-2 text-dark text-center" style="background: url(images/baking-bread.jpg)">
+          <h1 class="display-4">Cooking is Fun!</h1>
+          <h2 class="display-6"> Ask A Question </h2>
+          <p class="lead"> Helping to ease the transition for college students and make cooking fun and easy! </p>
+          <hr class="my-4">
+            <a class="btn btn-light btn-lg mt-3" href="login.html" role="button">Login</a>
+            <a class="btn btn-light btn-lg mt-3" href="signup.html" role="button">Sign Up</a>
+          </p>
+        </div> <!-- end of jumbotron -->
+        <nav class="navbar navbar-expand navbar-light bg-light">
+          <a class="navbar-brand" href="index.html">Skeleton</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="home.html">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link" href="question_post.html">Ask a Question</a>
+            </div>
+          </div>
+          <span class="navbar-text">
+            <a href="profile.html">Profile</a>
+          </span>
+        </nav> <!-- End of navbar -->
+
+        <div class="container" id="question-form">
+          <div class="row mt-3">
+            <div class="form-group ">
+              <label for="question">What's a good substitute for: </label>
+              <input type="text" class="form-control" id="question">
+            </div>
+            </div>
+          <div class="row mt-3">
+            <div class="form-group">
+              <label for="description">Description:</label>
+              <textarea class="form-control" rows="5" id="description"></textarea>
+            </div>
+          </div>
+        <!--  <a class="btn btn-primary btn-lg mt-3" id="postButton" role="button">Post!</a>
+          <div id="snackbar"> Question Posted! </div> -->
+      </div> <!--End of allcontent div-->
+    </body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/project.js"></script> -->
+  </html>

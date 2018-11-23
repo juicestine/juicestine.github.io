@@ -1,0 +1,66 @@
+<!doctype html>
+ <html lang=en>
+ <body background="images/food.png">
+
+    <head>
+      <title> Cooking is Fun! </title>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <script src="js/jquery.slim.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+
+  </head>
+    <body>
+      <div class="container">
+        <div class="jumbotron mb-2 text-dark text-left" style="background: url(images/baking-bread.jpg)">
+          <a href="index.html">
+            <img src="images/Close.png" alt="Profile Icon"
+            style="width:90px;height:90px;border:0" align="right"></a>
+          <h1 class="display-4">SubstiSoup!</h1>
+
+          <img src="images/profile.png" alt="Profile Icon"
+          style="width:200px;height:200px;" align="left" hspace="30">
+
+        <h1>Welcome, Lisa! </h1>
+
+        <div class="row mt-5">
+          <div class="col">
+        </div> <!--end of row 2-->
+
+        <h1>Still can't find an answer? Ask a friend!</h1>
+
+        <form action="mailto:e3pineda@ucsd.edu?Subject=SubstiSoup:%20Someone%20is%20asking%20you%20for%20help!" method="post" enctype="text/plain">
+        E-mail:<br>
+        <input type="text" name="mail"><br>
+        Message:<br>
+        <input type="text" name="comment" size="50"><br><br>
+        <input type="submit" value="Send" alert="Mail Sent!">
+        <input type="reset" value="Reset">
+      </form>
+
+      </div> <!-- end of all content container-->
+      <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+}
+</script>
+<script src="js/handlebars-v4.0.11.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/project.js"></script>
+    </body>
+  </body>
+  </html>
