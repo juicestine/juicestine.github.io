@@ -6,7 +6,7 @@
       <title> SubstiSoup! </title>
       <link rel="stylesheet" href="css/bootstrap.min.css">
       <link rel="stylesheet" href="css/home.css">
-        <!-- Favicon --!>
+        <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
         <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-512x512.png">
@@ -36,7 +36,8 @@
           <div class="row mt-3">
             <div class="form-group ">
               <label for="question">What's a good substitute for: </label>
-              <input type="text" class="form-control" id="question">
+              <input type="answer" class="form-control" id="question" placeholder="Ask Here!">
+              <!--<input type="text" class="form-control" id="question">-->
             </div>
             </div>
           <div class="row">
@@ -50,14 +51,14 @@
           <div class="row mt-5">
             <h1 class="text-center">Open Questions</h1>
           </div> <!-- End of row 1-->
-        
+
 
           <div class="form-group row mt-3">
-            <p>What's a good substitute for beef?</p>
+            <h4>What's a good substitute for beef?</h4>
           </div> <!-- End of row 2 -->
 
-        <!-- Carousel 1 --!>
-        <div class="container" style="max-width:500px;height:400px;text-align:center">
+        <!-- Carousel 1 -->
+        <div class="container" style="margin-bottom:30px; max-width:500px;height:400px;text-align:center">
             <div id="carouselBeef" class="carousel slide" data-ride="carousel" style="max-width:500px;height:400px;text-align:center" data-interval="5000">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselBeef" data-slide-to="0" class="active"></li>
@@ -100,7 +101,7 @@
                 </a>
             </div>
         </div>
-        
+
           <div class="row">
             <input type="answer" class="form-control" id="answer1" placeholder="Add Your Answer Here!">
             <div class="mt-2" id="buttons">
@@ -122,11 +123,11 @@
           </div>
 
           <div class="form-group row mt-3">
-            <p>What's a good substitute for celery?</p>          
+            <h4>What's a good substitute for celery?</h4>
           </div>
-        
-        <!-- Carousel 2 --!>
-        <div class="container" style="max-width:500px;height:400px;text-align:center">
+
+        <!-- Carousel 2 -->
+        <div class="container" style="margin-bottom:30px; max-width:500px;height:400px;text-align:center">
             <div id="carouselCelery" class="carousel slide" data-ride="carousel" style="max-width:500px;height:400px;text-align:center" data-interval="5000">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselCelery" data-slide-to="0" class="active"></li>
@@ -192,11 +193,11 @@
           </div><!-- End of row 3 -->
 
           <div class="form-group row mt-3">
-            <p>What's a good substitute for salt?</p>
+            <h4>What's a good substitute for salt?</h4>
           </div>
-        
-        <!-- Carousel 3 --!>
-        <div class="container" style="max-width:500px;height:400px;text-align:center">
+
+        <!-- Carousel 3 -->
+        <div class="container" style="margin-bottom:30px; max-width:500px;height:400px;text-align:center">
             <div id="carouselSalt" class="carousel slide" data-ride="carousel" style="max-width:500px;height:400px;text-align:center" data-interval="5000">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselSalt" data-slide-to="0" class="active"></li>
@@ -252,7 +253,6 @@
                 <div class="card card-body">
                   <ul class="list-group" id="saltList">
                     <li class="list-group-item">Lemon Juice</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
                     <li class="list-group-item">Fresh herbs (rosemary, cilantro, basil, etc)</li>
                     <li class="list-group-item">Ground Pepper or Red Pepper Flakes</li>
                     <li class="list-group-item">Salt substitutes such as Potassium Chloride</li>
@@ -270,23 +270,20 @@
 
 <script id='entry-template1' type="text/x-handlebars-template">
   <div class="form-group row mt-3">
-    <p>{{title}}</p>
+    <h4>{{title}} <span class="badge badge-primary">New</span></h4>
   </div>
   <div class="row">
-    <input type="answer" class="form-control" id="answer1" placeholder="Add Your Answer Here!">
+    <input type="answer" class="form-control" id="answer{{index}}" placeholder="Add Your Answer Here!">
     <div class="mt-2" id="buttons">
-      <btn class="btn btn-primary btn-sm"> Post </btn>
+      <btn class="btn btn-primary btn-sm" id="newPost{{index}}"> Post </btn>
       <button class="btn btn-light btn-sm" type="button" data-toggle="collapse"data-target="#results{{index}}" aria-expanded="false" aria-controls="collapseExample"> See Results </button>
     </div>
     <!--Collapsed Data -->
     <div class="collapse mt-2" id="results{{index}}">
       <div class="card card-body">
-        <ul class="list-group">
-          <li class="list-group-item">{{injectedResult1}}</li>
-          <li class="list-group-item">{{injectedResult2}}</li>
-          <li class="list-group-item">{{injectedResult3}}</li>
-          <li class="list-group-item">{{injectedResult4}}</li>
-          <li class="list-group-item">{{injectedResult5}}</li>
+        <ul class="list-group" id="newList{{index}}">
+          <li id="noResponse{{index}}" class="list-group-item show">{{injectedResult1}}</li>
+
         </ul>
       </div>
     </div> <!-- end of collapsed Data -->
