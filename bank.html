@@ -1,0 +1,131 @@
+<!doctype html>
+ <html lang=en>
+ <body background="images/food.png">
+
+    <head>
+      <title> SubstiSoup! </title>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/home.css">
+      <!-- Favicon --!>
+      <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-512x512.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+      <link rel="manifest" href="site.webmanifest">
+      <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+      <meta name="msapplication-TileColor" content="#da532c">
+      <meta name="theme-color" content="#ffffff">
+      <!-- end of jumbotron -->
+    </head>
+
+    <p>Welcome User!</p>
+    <p>Not user?<a href="signup.html"> Sign Up!</a></p>
+
+    <body>
+      <div class="container">
+        <div class="jumbotron mb-2 text-dark text-left" style="background: url(images/baking-bread.jpg)">
+
+          <a href="home.html">
+            <img src="images/brand.png" alt="Brand Icon"
+          style="width:310px;height:130px;border:0"></a>
+          <hr class="my-4">
+        </div>
+
+        <div class="container mb">
+          <div class="row mt-3">
+
+            <h3>Looking for cheap recipes with not a lot of ingrediants? Check out these recipes!</h3>
+          </div>
+            <div class="row mt-3">
+
+          <!-- Carousel 1 --!>
+          <div class="container" style="max-width:500px;height:400px;text-align:center">
+              <div id="carouselBeef" class="carousel slide" data-ride="carousel" style="max-width:500px;height:400px;text-align:center" data-interval="5000">
+                  <ol class="carousel-indicators">
+                      <li data-target="#carouselBeef" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselBeef" data-slide-to="1"></li>
+                      <li data-target="#carouselBeef" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <a href="https://tasty.co/search?q=3-ingrediants" target="_blank">
+                          <img class="d-block w-100" src="images/3.jpg" alt="Tofu Recipe [500x400]" style="max-width:500px;height:400px">
+                          <div class="carousel-caption d-none d-md-block">
+
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                          <a href="https://www.myrecipes.com/budget-recipes" target="_blank">
+                          <img class="d-block w-100" src="images/cheap.jpg" alt="Tempeh Recipe [500x400]" style="max-width:500px;height:400px">
+                          <div class="carousel-caption d-none d-md-block">
+
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                          <a href="https://www.allrecipes.com/recipes/1947/everyday-cooking/quick-and-easy/" target="_blank">
+                          <img class="d-block w-100" src="images/fast.png" alt="Mushroom Recipe [500x400]" style="max-width:500px;height:400px">
+                          <div class="carousel-caption d-none d-md-block">
+
+                          </div>
+                      </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselBeef" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselBeef" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                  </a>
+              </div>
+          </div>
+
+            <div class="row">
+
+              </div>
+              <!--Collapsed Data -->
+
+
+        </div> <!-- end of jumbotron -->
+
+      </div>
+      <script src="js/handlebars-v4.0.11.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="js/jquery.slim.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/project.js"></script>
+
+      <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+    </body>
+
+  </body>
+  </html>
